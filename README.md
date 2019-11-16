@@ -34,5 +34,5 @@ End
 Create Procedure [dbo].[GetUserDetails]  
 as  
 begin  
-   select * from Users
+   select first_name,last_name,email_address,date_created from Users
 End
