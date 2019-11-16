@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+<script src="~/Scripts/jquery-1.12.4.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var oTable = $('#myDatatable').DataTable({
+            "ajax": {
+                "url": '/User/GetAllUserData',
+                "type": "get",
+                "datatype": "json"
+            },
+            "columns": [
+
+                { "data": "FirstName", "autoWidth": true },
+                { "data": "LastName", "autoWidth": true },
+                { "data": "Email", "autoWidth": true },
+                { "data": "Password", "autoWidth": true },
+                { "data": "DateCreated", "autoWidth": true }
+
+            ]
+        })
+
+    });
+
+</script>
+
+<br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<br />
+<table id="myDatatable" class="table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Date Created</th>
+        </tr>
+    </thead>
+
+</table>
+

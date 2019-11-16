@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafetracMVCApp", "SafetracMVCApp\SafetracMVCApp.csproj", "{8268E28D-26E5-4F8B-B617-C2310A67CDAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8268E28D-26E5-4F8B-B617-C2310A67CDAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8268E28D-26E5-4F8B-B617-C2310A67CDAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8268E28D-26E5-4F8B-B617-C2310A67CDAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8268E28D-26E5-4F8B-B617-C2310A67CDAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11AF9BEC-8FF7-4C46-B051-56DE14756C34}
+	EndGlobalSection
+EndGlobal
