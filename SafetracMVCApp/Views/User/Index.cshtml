@@ -4,10 +4,11 @@
 }
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-<script src="~/Scripts/jquery-1.12.4.js"></script>
+
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 <script>
-    $(document).ready(function () {
+    $(document).ready(function () {      
         var oTable = $('#myDatatable').DataTable({
             "ajax": {
                 "url": '/User/GetAllUserData',
@@ -19,7 +20,10 @@
                 { "data": "FirstName", "autoWidth": true },
                 { "data": "LastName", "autoWidth": true },
                 { "data": "Email", "autoWidth": true },
-                { "data": "DateCreated", "autoWidth": true }
+                {
+                    "data": "DateCreated", "autoWidth": true, "render": function (d) {
+                        return moment(d).format("YYYY-MM-DD");
+                    }}
 
             ]
         })
@@ -27,13 +31,13 @@
     });
 
 </script>
-
+<br />
 <br />
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New User", "Create", null, new { @class = "btn-lg btn-primary" })
 </p>
 <br />
-<table id="myDatatable" class="table-striped" style="width:100%">
+<table id="myDatatable" class="table-striped table-bordered" style="width:100%">
     <thead>
         <tr>
             <th>First Name</th>
