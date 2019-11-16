@@ -27,8 +27,8 @@ namespace SafetracMVCApp.Models
             cmd.Parameters.AddWithValue("@LastName", model.LastName);
             cmd.Parameters.AddWithValue("@Password", model.Password);
             cmd.Parameters.AddWithValue("@EmailAddress", model.Email);
-            cmd.Parameters.AddWithValue("@DateCreated", DateTime.UtcNow);
-            cmd.Parameters.AddWithValue("@DateModified",DateTime.UtcNow);
+            cmd.Parameters.AddWithValue("@DateCreated", SqlDbType.DateTime2);
+            cmd.Parameters.AddWithValue("@DateModified", SqlDbType.DateTime2);
 
 
             con.Open();
@@ -64,7 +64,6 @@ namespace SafetracMVCApp.Models
                         FirstName = Convert.ToString(dr["first_name"]),
                         LastName = Convert.ToString(dr["last_name"]),
                         Email = Convert.ToString(dr["email_address"]),
-                        Password= Convert.ToString(dr["user_password"]),
                         DateCreated = Convert.ToDateTime(dr["date_created"]),
                      
                     });
