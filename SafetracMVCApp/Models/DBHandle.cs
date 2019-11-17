@@ -27,8 +27,8 @@ namespace SafetracMVCApp.Models
             cmd.Parameters.AddWithValue("@LastName", model.LastName);
             cmd.Parameters.AddWithValue("@Password", model.Password);
             cmd.Parameters.AddWithValue("@EmailAddress", model.Email);
-            cmd.Parameters.AddWithValue("@DateCreated", SqlDbType.DateTime2);
-            cmd.Parameters.AddWithValue("@DateModified", SqlDbType.DateTime2);
+            cmd.Parameters.AddWithValue("@DateCreated", DateTime.UtcNow);
+            cmd.Parameters.AddWithValue("@DateModified", DateTime.UtcNow);
 
 
             con.Open();
